@@ -1,0 +1,113 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Return Book</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Return Book</h1>-->
+<!--    <form action="/return" method="post">-->
+<!--        <input type="text" name="book" placeholder="Enter book name">-->
+<!--        <input type="submit" value="Return">-->
+<!--    </form>-->
+<!--<div><h1>return {{returned}}</h1></div>-->
+<!--<a href="/">Home</a>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Return Book</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/premium-photo/shelf-with-books_257123-9780.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+div {
+    margin-top: 20px;
+    display: none;
+}
+
+.show {
+    display: block;
+    font-size: 24px;
+    color: #007bff;
+}
+    </style>
+<!--  <link rel="stylesheet" href="return-book-style.css">-->
+</head>
+<body>
+<h1>Return Book</h1>
+<form id="returnForm" method="post">
+  <input type="text" name="book" placeholder="Enter book name">
+  <input type="submit" value="Return">
+</form>
+<div id="resultDiv"></div>
+<a href="/">Home</a>
+
+<!--<script>-->
+<!--  document.addEventListener("DOMContentLoaded", function () {-->
+<!--    const form = document.getElementById("returnForm");-->
+<!--    const resultDiv = document.getElementById("resultDiv");-->
+
+<!--    form.addEventListener("submit", function (e) {-->
+<!--      e.preventDefault();-->
+<!--      const formData = new FormData(form);-->
+
+<!--      fetch("/return", {-->
+<!--        method: "POST",-->
+<!--        body: formData,-->
+<!--      })-->
+<!--              .then(response => response.json())-->
+<!--              .then(data => {-->
+<!--                const returnedValue = "Book " + data.book + " returned successfully!";-->
+<!--                resultDiv.textContent = returnedValue;-->
+<!--                resultDiv.classList.add("show");-->
+<!--              })-->
+<!--              .catch(error => {-->
+<!--                console.error("Error:", error);-->
+<!--              });-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Books</title>
+</head>
+<body>
+    <h1>List Books</h1>
+    <ul>
+<!--        {{Map}}-->
+         {% for key, value in Map.items() %}
+    <div>{{ key }}: {{ value }}</div>
+    {% endfor %}
+    </ul>
+<a href="/">Home</a>
+</body>
+</html>
